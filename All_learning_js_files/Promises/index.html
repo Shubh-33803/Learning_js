@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+
+    <!--internal style here -->
+
+    <style>
+        body{
+            background-color: rgb(20, 20, 20);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+        h1{
+            font-size: 60px;
+            color: rgba(255, 255, 255, 0.292);
+        }
+    </style>
+</head>
+<body>
+    <h1>Promise <i class="fa-solid fa-face-smile-wink" style="color: rgba(240, 255, 24, 0.781);"></i> </h1>
+
+
+    <script>
+        // let myprom = new Promise((resolve,reject) => {
+        //     setTimeout(() => {
+        //         reject("This is promise");
+        //     },4000);
+        // });
+
+
+        // myprom.then((res) => {
+        //     console.log(res);
+        // }).catch((error) => {
+        //     console.log(error);
+        // }).finally(() => {
+        //     console.log("keep going!!");
+        // }); 
+
+        //--------------------------------------------
+
+        // let studentName = "Rohan";
+
+        // let myfun = (studentName) => {
+        //         return new Promise((resolve,reject) => {
+                    
+        //             setTimeout(() => {
+
+        //                 let isSuccessful = Math.random() > 0.4;
+
+        //             if(isSuccessful){
+        //                 resolve(`${studentName} Admission is completed!!`);
+        //             }else{
+        //                 reject(`${studentName} Admission is not completed!!`);
+        //             }
+
+        //             },3000);
+        //         });
+        //     };
+
+
+        //     myfun(studentName).then((resolve) => {
+        //         console.log(resolve);
+        //     }).catch((reject) => {
+        //         console.log(reject);
+        //     }).finally(() => {
+        //         console.log("your addmision is completed!");
+        //     });
+
+
+
+
+        // new Promise((resolve,reject) => {
+        //     setTimeout(() => {
+        //         reject("Hello,World!");
+        //     },2000);
+        // }).then((resolve) => {
+        //     console.log(resolve);
+        // }).catch((reject) => {
+        //     console.log(reject);
+        // });
+
+
+        // new Promise((resolve,reject) => {
+        //     setTimeout(() => {
+        //         resolve("This is resolved");
+        //     },2000);
+
+        // }).then((resolve) => {
+        //     console.log(resolve);
+        // }).catch((reject) => {
+        //     console.log(reject);
+        // }).finally(() => {
+        //     console.log("I am finally method");
+        // });
+
+
+
+
+        // let pms1 = new Promise((resolve,reject) => {
+        //     setTimeout(() => {
+        //         resolve("promise-1");
+        //     },2000);
+
+        // });
+
+        // let pms2 = new Promise((resolve,reject) => {
+        //     setTimeout(() => {
+        //         reject("pormise-2");
+        //     },1000);
+
+        // });
+
+        // let pms3 = new Promise((resolve,reject) => {
+        //     setTimeout(() => {
+        //         reject("promise-3");
+        //     },6000);
+
+        // });
+
+        
+
+        // Promise.all([pms1,pms3,pms2]).then((value) => {
+        //     console.log(value);
+        // }).catch((error) => {
+        //     console.log(error);
+        // });
+
+        // Promise.allSettled([pms1,pms2,pms3]).then((value) => {
+        //     console.log(value);
+        // }).catch((error) => {
+        //     console.log(error);
+        // });
+
+        // Promise.race([pms1,pms2,pms3]).then((value) => {
+        //     console.log(value);
+        // }).catch((error) => {
+        //     console.log(error);
+        // });
+
+
+        let text = new Promise((resolve,reject) => {
+            setTimeout(() => {
+                resolve("This is resolve");
+            },4000);
+        });
+
+        text.then((res) => {
+            console.log(res);
+        }).catch((error) => {
+            error("This is an error");
+        });
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event propagation</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+
+        #outer{
+            width: 400px;
+            height: 300px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            &:hover{
+                background-color: royalblue;
+            }
+        }
+
+        #middle{
+            width: 300px;
+            height: 200px;
+            background-color: rgb(66, 65, 65);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            &:hover{
+                background-color: rgb(216, 247, 44);
+            }
+        }
+
+        #inner{
+            background-color: rgb(252, 141, 14);
+            width: 200px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover{
+                background-color: rgb(253, 44, 124);
+            }
+        }
+
+        p{
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Event propagation</h1>
+    <section>
+        <div id="outer">
+            <p>outer</p>
+            <div id="middle">
+                <p>middle</p>
+                <div id="inner">
+                    <p>inner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+
+        let callouter = (event) => {
+            console.table([
+                {
+                Description:"i am outer",
+                Target: event.target,
+                currentTarger: event.currentTarget,
+            },
+        ])
+        };
+
+        let callmiddle = (event) => {
+            console.table([
+                {
+                Description:"i am middle",
+                Target: event.target,
+                currentTarger: event.currentTarget,
+            },
+        ])
+        };
+
+        let callinner = (event) => {
+            console.table([
+                {
+                Description:"i am inner",
+                Target: event.target,
+                currentTarger: event.currentTarget,
+            },
+        ]);
+
+            // event.stopPropagation();
+
+        };
+
+
+        document.getElementById("outer").addEventListener("click",callouter,true);
+        document.getElementById("middle").addEventListener("click",callmiddle,true);
+        document.getElementById("inner").addEventListener("click",callinner,true);
+    </script>
+
+</body>
+</html>

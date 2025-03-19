@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(49, 49, 49);
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #coundown{
+            font-size: 60px;
+            color: white;
+            margin-right: 40px;
+        }
+        .buttons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        button{
+            font-size: 16px;
+            padding: 10px;
+            border: none;
+            background-color: royalblue;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .content p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div >
+            <p id="coundown">0</p>
+        </div>
+        <div class="buttons">
+            <button class="start_btn">Start</button>
+            <button class="stop_btn">Stop</button>
+            <button class="reset_btn">Reset</button>
+            <button class="clear_btn">Clear</button>
+            <button class="getTime_btn">Get Time</button>
+        </div>
+        <div class="content"></div>
+    </div>
+
+
+    <script>
+        let zero = document.getElementById("coundown");
+        let cont = document.querySelector(".content");
+        let startcount = 1;
+        let int_val;
+
+        // function here
+        const startfun = () => {
+           int_val =  setInterval(() => {
+                zero.innerText = startcount++;
+                
+            },1000);
+        };
+
+        const stopfun = () => {
+            clearInterval(int_val);
+        };
+
+        const resetfun = () =>{
+            startcount = 0;
+            zero.innerText = "0";
+            clearInterval(int_val);
+        };
+
+        const getTimefun = () => {
+            let para = document.createElement("p");
+            para.innerText = `Time = ${startcount-1}`;
+            cont.appendChild(para);
+        };
+
+        const clearfun = () => {
+            cont.innerText = "";
+            clearInterval(int_val);
+            zero.innerText = "0";
+        };
+
+
+
+        // Event listener
+        document.querySelector(".start_btn").addEventListener("click",startfun);
+        document.querySelector(".stop_btn").addEventListener("click",stopfun);
+        document.querySelector(".reset_btn").addEventListener("click",resetfun);
+        document.querySelector(".clear_btn").addEventListener("click",clearfun);
+        document.querySelector(".getTime_btn").addEventListener("click",getTimefun);
+
+    </script>
+</body>
+</html>

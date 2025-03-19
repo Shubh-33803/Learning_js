@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color picker</title>
+
+    <!-- css here -->
+    <style>
+       section{
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+       }
+
+       body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-image: linear-gradient(to right,blue,yellow);
+       }
+
+       .copyCode{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        background-color: rgba(0, 0, 255, 0.199);
+        border-radius: 8px;
+        cursor: pointer;
+       }
+       button{
+        padding: 10px;
+        font-size: 20px;
+        background-color: brown;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+       }
+    </style>
+
+
+</head>
+<body>
+    <section>
+        <div class="container">
+            <button id="button1">#012378</button>
+            <button id="button2">#493234</button>
+
+        </div>
+        <h2>This is your color</h2>
+        <div id="copyCode">
+            background-image: linear-gradient(to right,blue,yellow);
+        </div>
+    </section>
+
+
+    <!-- script here -->
+     <script>
+
+        let btn1 = document.getElementById("button1");
+        let btn2 = document.getElementById("button2");
+        let copydiv = document.getElementById("copyCode");
+        let btn1_color = "#f35382";
+        let btn2_color = "#778323";
+
+
+        let myhex = () =>{
+
+            let hexvalue = "0123456789abcdef";
+            let colors = "#";
+            for(let i = 0; i<6; i++){
+                colors = colors + hexvalue[Math.floor(Math.random() * 16)]
+            }           
+            
+            // console.log(colors);
+            return colors;
+        }
+
+        let btn1fun = () =>{
+            btn1_color = myhex();
+            // console.log(btn1_color);
+            btn1.innerText = btn1_color;
+            document.body.style.backgroundImage = `linear-gradient(to right,${btn1_color},${btn2_color})`;
+            copydiv.innerText  = `background-image: linear-gradient(to right,${btn1_color},${btn2_color})`;
+            
+        }
+
+        let btn2fun = () =>{
+            btn2_color = myhex();
+            // console.log(btn2_color);
+            btn2.innerText = btn2_color;
+            document.body.style.backgroundImage = `linear-gradient(to right,${btn1_color},${btn2_color})`;
+            copydiv.innerText  = `background-image: linear-gradient(to right,${btn1_color},${btn2_color})`;
+        }
+
+
+
+        btn1.addEventListener("click", btn1fun);
+        btn2.addEventListener("click", btn2fun);
+
+
+        copydiv.addEventListener("click", () =>{
+            navigator.clipboard.writeText(copydiv.innerText);
+            alert("copied!");
+            
+        })
+
+     </script>
+</body>
+</html>

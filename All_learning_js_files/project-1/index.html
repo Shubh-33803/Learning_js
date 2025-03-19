@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>screen</title>
+    <style>
+        .dark{
+            background-color: black;
+            color: white;
+        }
+        .light{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Change screen color </h1>
+    <button id="btn">Change</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus dolorum saepe nesciunt atque accusamus molestiae explicabo eveniet obcaecati voluptas dignissimos, blanditiis porro nam similique magnam a at odio perspiciatis.</p>
+    <script>
+
+       let colorBtn = document.getElementById("btn");
+       let currmode = "light";
+       
+       colorBtn.addEventListener("click", () => {
+            if(currmode === "light"){
+                currmode = "dark";
+                // document.querySelector("body").style.backgroundColor = "black";
+                document.querySelector("body").classList.add("dark");
+                document.querySelector("body").classList.remove("light");
+            }else{
+                currmode = "light";
+                // document.querySelector("body").style.backgroundColor = "white";
+                document.querySelector("body").classList.add("light");
+                document.querySelector("body").classList.remove("dark");
+            }
+
+            console.log(currmode);
+       });
+
+    </script>
+</body>
+</html>

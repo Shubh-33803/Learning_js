@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toc - Game</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #548687;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+        .box{
+            padding: 25px;
+            border-radius: 10px;
+            border: none;
+            font-size: 27px;
+            width: 60px;
+            height: 64px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:aliceblue ;
+            color: black;
+
+        }
+        .game{
+            width: 256px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 30px;
+        }
+
+        #Reset{
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: none;
+        }
+        #winner{
+            font-size: 30px;
+        }
+        .win-b{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Tic Tac Toc - Game 🎮</h1>
+
+            <div class="game">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+        </div>
+
+        <div id="win-box" class="win-b">
+            <p id="winner"></p>
+
+        </div>
+
+        <button id="Reset">Reset Game</button>
+
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

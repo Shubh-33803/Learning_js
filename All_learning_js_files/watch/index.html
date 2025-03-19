@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watch</title>
+    <style>
+        body{
+            background-color: rgb(44, 44, 44);
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+        .box{
+           width: 500px; 
+           height: 200px;
+           background-color: royalblue;
+           border-radius: 20px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+        p{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p id="main_content">Hello, World!</p>
+    </div>
+
+    <script>
+        let clock = () =>{
+            let dt = new Date().toLocaleTimeString();
+            document.getElementById("main_content").innerText = dt;
+        }
+
+        clock();
+        let intervalId = setInterval(()=>{
+            clock();
+        },1000);
+
+        setTimeout(()=>{
+            clearInterval(intervalId);
+        },5000)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event_delegation</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgba(0, 0, 0, 0.582);
+        }
+        h1{
+            text-align: center;
+        }
+        .elem{
+            border: 2px solid black;
+            padding: 8px;
+            font-size: 17px;
+            width: 50px;
+            height: 50px;
+            background-image: linear-gradient(to right,yellow,pink);
+            cursor: pointer;
+        }
+
+        .mainbody{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            column-gap: 15px;
+            row-gap: 15px;
+            flex-wrap: wrap;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Delegation :- Period Table</h1>
+    <section class="mainbody"></section>
+
+    <script>
+
+        let stylingbox = (sym,atom,elem_name) => {
+            let element = document.createElement("div");
+            element.classList.add("elem");
+            element.innerText = sym;
+            element.setAttribute("data-atomic-number",atom);
+            element.setAttribute("data-element-name",elem_name);
+
+
+            return element;
+        }
+
+        let Period_table = () => {
+            let mainbody = document.querySelector(".mainbody");
+
+
+            for(let i = 0; i<=50; i++){
+                let elm = stylingbox(`Elem ${i} `, i , `Element ${i}`);                
+                mainbody.append(elm);
+            };
+
+
+            mainbody.addEventListener("click", (e) => {
+               alert(e.target.innerText);
+            });
+
+
+        }
+
+        Period_table();
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>higher order function</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Higher Order Function</h1>
+
+    <script>
+
+
+        // Higher order funtion and callback function------
+
+        // function myfun(name,greet){
+        //     console.log("my name = ",name);
+        //     greet(name);
+        // }
+
+        // function greet(name){
+        //     console.log("again name = ",name);
+        // }
+
+        // myfun("shubham",greet);
+
+
+
+
+        function mathOpe(a,b,operation){
+            return operation(a,b);
+        };
+
+        function add(a,b){
+            return a+b;
+        };
+
+        function sub(a,b){
+            return a-b;
+        };
+        
+        console.log(mathOpe(3,5,add));
+        console.log(mathOpe(3,5,sub));
+        
+    </script>
+</body>
+</html>

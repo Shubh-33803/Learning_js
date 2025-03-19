@@ -1,0 +1,9 @@
+{
+    "editor.scrollbar.vertical": "auto",
+    "editor.scrollbar.verticalScrollbarSize": 10,
+    "editor.scrollPredominantAxis": true,
+    "editor.stickyScroll.enabled": false,
+    "editor.stickyScroll.scrollWithEditor": true,
+    "workbench.list.smoothScrolling": true,
+    "workbench.editor.titleScrollbarSizing": "default"
+}

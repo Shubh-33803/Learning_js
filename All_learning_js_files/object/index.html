@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>javascript</h1>
+    
+
+    
+    
+    <script>
+
+        // let product = {
+        //     id:1,
+        //     name:"laptop",
+        //     brand:"lenovo",
+        //     metal_body:true,
+        //     myfun:function(){
+                // return "This is function!";
+        //         console.log("Hello,World!");
+        //     },
+        //     Ram:"4Gb",
+        //     "Student's_name":"Shubham",
+        // }
+
+        // console.log(product["Student's_name"]);
+        // product.price = 34000;
+        // product["battery"] = "65W";
+        // console.log(product);
+
+        // console.log(product.myfun());
+        // product.myfun();
+
+        
+
+        // let student = {
+        //     name:"Shubham",
+        //     id:"12A43",
+        //     course:"BCA",
+        //     detail:function () {
+        //         console.log(`Student name = ${this.name} \nStudent id = ${this.id} \nStudent course = ${this.course}`);
+        //     },
+        // }
+
+        // student.detail();
+
+        // let id = "324";
+
+        // let student = {
+        //     name:"Shubham",
+        //     [id]:"12A43",
+        //     course:"BCA",
+        //     detail:function () {
+        //         console.log(`Student name = ${id} \nStudent id = ${student[id]} \nStudent course = ${student.course}`);
+        //     },
+        // }
+
+        // student.detail();
+
+        // let a = 8;
+
+        // let modify = (x) => {
+        //     console.log(x = 20);
+        // };
+
+
+        // console.log(modify(a));
+        
+        // console.log(a);
+
+
+        // let items = {
+        //     name:"laptop",
+        //     brand:"lenovo",
+        //     prince:39999,
+        //     ram:"4GB",
+        //     "person_laptop":"Mohan",
+            
+        // }
+
+        // items.number = "24214";
+
+        // console.log(items["person_laptop"]);
+        // console.log(items);
+
+
+        // let myobj = {
+        //     greet:function(){
+        //         console.log("Hello,world!");
+        //     }
+        // }
+        
+        // myobj.greet;
+
+
+
+        // let id = "123";
+
+        // let items = {
+        //     name:"mohan",
+        //     [id]:"789",
+        //     address:"delhi",
+        //     course:"BCA",
+        //     details:function(){
+        //         console.log(`${this.name} = ${id}\n${this.name} = ${items[id]}`);
+        //     }
+        // }
+
+        // items.details();
+
+
+
+        // pass by value and pass by reference--------
+
+
+        // let a = 3;
+
+        // let modify = (x) => (x = 20);
+
+        // console.log(modify(a));
+        // modify(a);
+        // console.log(a);
+
+
+        // let obj1 = {
+        //     name:"Rohan",
+        //     age:"23",
+        // }
+        // obj1.course = "BCA";
+
+        // let obj2 = obj1;
+        // console.log(obj2);
+        // console.log("Original", obj1);
+        // // console.log(obj1);
+
+        // let items = {
+        //      name:"laptop",
+        //      brand:"lenovo",
+        //      prince:39999,
+        //      ram:"4GB",
+        //      "person_laptop":"Mohan",
+            
+        //  }
+
+        //  console.log(items);
+        //  let convert = JSON.stringify(items);
+        //  console.log(convert);
+        //  let newcon = JSON.parse(convert);
+        //  console.log(newcon);
+
+
+    // let fun = () => {
+    //     console.log(this);
+    // }
+        
+    // fun();
+
+
+    // let items = {
+    //     name:"Shubham",
+    //     age:"23",
+    //     myfun:() => {
+    //         console.log(this);
+    //     },
+    // };
+
+    // console.log(items.myfun());
+    // items.myfun();
+
+
+
+    let items = {
+        name:"Shubham",
+        course:"BCA",
+        address:"Delhi",
+        age:23,
+    };
+
+    // let mykey =  Object.keys(items);
+    // console.log(mykey);
+
+    // let myvalue =  Object.values(items);
+    // console.log(myvalue);
+
+    // let myentries = Object.entries(items);
+    // console.log(myentries);
+
+    // console.log(items.hasOwnproperty("name"));
+    // let a = items.hasOwnProperty("name");
+    // let a = items.hasOwnProperty("laptop");
+
+    // console.log(a);
+
+    // let tar = {a:1, b:2, c:3};
+    // let sor = {d:4, b:5, f:6};
+
+    // let copy = Object.assign(tar,sor);
+    // console.log(copy);
+
+    Object.freeze(items);
+    items.head = "infinity";
+    console.log(items);
+
+    </script>
+</body>
+</html>

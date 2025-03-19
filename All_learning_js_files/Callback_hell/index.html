@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback hell</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>CallBack Hell</h1>
+
+    <script>
+        let callback_hell = () => {
+            setTimeout(() => {
+                console.log("my name is shubham sharma");
+                setTimeout(() => {
+                    console.log("i like to play cricket");
+                    setTimeout(() => {
+                        console.log("i also like to code");
+                        setTimeout(() => {
+                            console.log("this is callback hell");
+                            setTimeout(() => {
+                                console.log("i am learing javascript");
+                            },2000);
+                        },2000);
+                    },2000);
+                },2000);
+            },2000);
+
+        }
+
+        callback_hell();
+    </script>
+</body>
+</html>

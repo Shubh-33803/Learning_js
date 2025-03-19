@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgba(154, 119, 73, 0.584);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 90vh;
+}
+
+h1{
+    text-align: center;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 215px;
+    
+}
+
+.box{
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 30px;
+    background-color:white;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
+
+#showWinner{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+
+
+

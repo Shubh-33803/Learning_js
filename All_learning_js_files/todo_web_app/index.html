@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo app</title>
+    <style>
+        body{
+            background-color: rgb(43, 43, 43);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        form input{
+            padding: 2px 2px;
+            font-size: 20px;
+        }
+        form button{
+            padding: 8px;
+            background-color: royalblue;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+
+        }
+        #item_box{
+            margin-top: 20px;
+            background-color: rgb(75, 74, 75);
+            width: 328px;
+            height: auto;
+            display: flex;
+            /* justify-content: space-around; */
+            grid-template-columns: 1fr 0.3fr;
+            align-items: center;
+            /* flex-direction: column; */
+        }
+        h1{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>First Todo app</h1>
+        <form>
+            <input type="text"  id="input_box">
+            <button id="btn"> Add Todo </button>
+            <section id="item_box">
+                <!-- <li></li> <button id="delete_btn">delete</button> -->
+            </section>
+        </form>
+    </div>
+
+    <!-- script here -->
+     <script>
+        let int_box = document.getElementById("input_box");
+        let btn_click = document.getElementById("btn");
+        let items = document.getElementById("item_box");
+
+        let addtodolist = (e) =>{
+            e.preventDefault();
+            let divelm = document.createElement("div");
+            divelm.classList.add("new_box");
+            divelm.innerHTML = `<li>${int_box.value}</li> <button id="delete_btn"> Delete</button>`;
+
+            items.append(divelm);
+        }
+
+        btn_click.addEventListener("click",(e)=>{
+            addtodolist(e);
+        });
+
+
+     </script>
+</body>
+</html>
