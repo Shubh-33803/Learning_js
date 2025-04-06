@@ -1,0 +1,12 @@
+[
+    {
+        "sName":"Rohan",
+        "marks":33,
+        "add":"Delhi"
+    },
+    {
+        "sName":"Mohan",
+        "marks":43,
+        "add":"mumbai"
+    }
+]
